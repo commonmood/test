@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>login</title>
+<script language="javascript">
+    function inputCheck()
+    {
+        if(form1.user.value == "")
+        {
+            alert("please input user name");
+            form1.user.focus();
+            return false;
+        }
+        
+        if(form1.pass.value == "")
+        {
+            alert("please input password");
+            form1.pass.focus();
+            return false;
+        }
+        
+        return true;
+    }
+</script>
+</head>
+<body onload="form1.user.focus()">
+<center>
+<h3>Please input your user and password</h3>
+<hr>
+<form name="form1" action="login.jsp" method="post">
+    <input type="hidden" name="action" value="login">
+    user name:<input type="text" name="user" value="">
+    password:<input type="password" name="pass" value=""><br><br>
+    <input type="submit" value=" ok " onclick="return inputCheck()">
+</form>
+</center>
+</body>
+</html>
